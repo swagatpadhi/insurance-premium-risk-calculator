@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Premium Calculator + Risk Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="left">
+            <div class="heading">
+                <div class="heading-1">
+                    <h1>Insurance Premium and Risk Calculator</h1>
+                </div>
+
+                <div class="heading-2">
+                    <h2>Calculate your Insurance premium instantly,
+                        without being bothered about your privacy.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="privacy">
+                <div id="privacy-icon">
+                    <i class="ri-shield-user-line"></i>
+                </div>
+
+                <div id="about-privacy">
+                    Data collected from users is only used for calculation of premium and stored safely in our database.
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="right">
+            <div class="form-area">
+                <div class="right-heading">Calculator: </div>
+
+
+                <form action="/calculate" method="POST" class="premium-form">
+
+                    <label>User's Age</label>
+                    <input type="number" name="age" min="18" required>
+
+                    <label>Vehicle Type</label>
+                    <select name="vehicle_type" required>
+                        <option value="">Select vehicle</option>
+                        <option value="car">Car</option>
+                        <option value="bike">Bike</option>
+                    </select>
+
+                    <label>Engine type</label>
+                    <select name="engine_type" required>
+                        <option value="">Select Engine type</option>
+                        <option value="sports">Sports</option>
+                        <option value="economy">Economy</option>
+                    </select>
+
+                    <label>Vehicle Value (₹)</label>
+                    <input type="number" name="vehicle_value" required>
+
+                    <label>Location</label>
+                    <select name="location" required>
+                        <option value="">Select location</option>
+                        <option value="metro">Metro City</option>
+                        <option value="non-metro">Non-Metro City</option>
+                    </select>
+
+                    <label>Driving History</label>
+                    <select name="accidents" required>
+                        <option value="">Select driving history</option>
+                        <option value="0">No accidents</option>
+                        <option value="1">1 accident</option>
+                        <option value="2">2+ accidents</option>
+                    </select>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn-primary">
+                            Calculate Premium
+                        </button>
+
+                        <button type="reset" class="btn-secondary">
+                            Reset
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+</body>
+
+</html>
