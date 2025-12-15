@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import sqlite3
 from db import create_table, get_db_connection, insert_record
 from services.calculate import calculate_final_premium
+import os
 
 
 app = Flask(__name__)
@@ -43,4 +44,6 @@ def calculate():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
