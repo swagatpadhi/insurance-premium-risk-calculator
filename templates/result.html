@@ -10,13 +10,22 @@
 
 <body>
     <div class="wrapper">
-        <div class="header">
-            <h1>Insurance Result</h1>
-        </div>
+
         <div class="result_box">
-            <p>Premium: Rs {{premium}}</p>
-            <p>Risk: {{risk}}</p>
-            <p>Risk Level: {{risk_level}}</p>
+            <div class="header">
+                <h1>Insurance Result</h1>
+            </div>
+            <div class="results">
+                <div class="result_containers">
+                    <p>PREMIUM: <br>Rs {{premium}}</p>
+                </div>
+                <div class="result_containers">
+                    <p>RISK: {{risk}}</p>
+                </div>
+                <div class="result_containers">
+                    <p>RISK LEVEL: {{risk_level}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
